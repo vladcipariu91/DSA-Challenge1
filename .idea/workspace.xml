@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="701fc137-36bb-4589-bc19-f68b5d24ff9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/problem_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_5.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570700044564</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixes problem_4 and adds more unit tests.">
+      <created>1570701945157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570701945157</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -67,6 +74,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updates problem_1's tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="updates problem_1's tests." />
+    <MESSAGE value="fixes problem_4 and adds more unit tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes problem_4 and adds more unit tests." />
   </component>
 </project>
