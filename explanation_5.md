@@ -17,5 +17,5 @@
 ## Space complexity
 
     The space complexity for this problem is O(n) where n is the number
-    of blocks saved on the block chain.
+    of items we store in the map. The blockchain object has a map and a reference to it's head.
     

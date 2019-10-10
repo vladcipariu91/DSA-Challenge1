@@ -19,4 +19,5 @@
 
 ## Space complexity 
 
-    This is O(n). Although the list holds the items once and then the map as well.
+    The space complexity for this problem is O(2 * n) where n is the capacity of the cache.
+    The overall complexity for the LRU Cache is O(n).

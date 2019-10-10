@@ -1,4 +1,4 @@
-class LRU_Cache(object):
+class LRUCache(object):
 
     def __init__(self, capacity):
         self.__capacity = capacity
@@ -121,7 +121,7 @@ class DoublyLinkedList(object):
 # Testing
 
 def test_cache_hit_first():
-    lru_cache = LRU_Cache(5)
+    lru_cache = LRUCache(5)
 
     lru_cache.set(1, 1)
     lru_cache.set(2, 2)
@@ -134,7 +134,7 @@ def test_cache_hit_first():
 
 
 def test_cache_hit_middle():
-    lru_cache = LRU_Cache(5)
+    lru_cache = LRUCache(5)
 
     lru_cache.set(1, 1)
     lru_cache.set(2, 2)
@@ -147,7 +147,7 @@ def test_cache_hit_middle():
 
 
 def test_cache_hit_last():
-    lru_cache = LRU_Cache(5)
+    lru_cache = LRUCache(5)
 
     lru_cache.set(1, 1)
     lru_cache.set(2, 2)
@@ -162,7 +162,7 @@ def test_cache_hit_last():
 
 
 def test_cache_miss():
-    lru_cache = LRU_Cache(5)
+    lru_cache = LRUCache(5)
 
     lru_cache.set(1, 1)
     lru_cache.set(2, 2)
@@ -177,7 +177,7 @@ def test_cache_miss():
 
 
 def test_set_when_cache_is_full():
-    lru_cache = LRU_Cache(5)
+    lru_cache = LRUCache(5)
 
     lru_cache.set(1, 1)
     lru_cache.set(2, 2)
@@ -199,7 +199,7 @@ def test_set_when_cache_is_full():
 
 
 def test_empty():
-    lru_cache = LRU_Cache(5)
+    lru_cache = LRUCache(5)
 
     print(lru_cache.get(4))
     # expected -1
