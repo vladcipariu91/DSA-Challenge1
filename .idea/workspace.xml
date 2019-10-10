@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="701fc137-36bb-4589-bc19-f68b5d24ff9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/problem_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +44,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570642462652</updated>
     </task>
+    <task id="LOCAL-00001" summary="updates problem_1's tests.">
+      <created>1570700044564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570700044564</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -57,5 +64,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updates problem_1's tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="updates problem_1's tests." />
   </component>
 </project>

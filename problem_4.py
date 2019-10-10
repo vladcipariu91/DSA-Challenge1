@@ -27,19 +27,6 @@ class Group(object):
         return self.name
 
 
-parent = Group("parent")
-child = Group("child")
-sub_child = Group("subchild")
-sub_child_1 = Group("subchild_1")
-
-sub_child_user = "sub_child_user"
-sub_child.add_user(sub_child_user)
-
-child.add_group(sub_child)
-child.add_group(sub_child_1)
-parent.add_group(child)
-
-
 def is_user_in_group(user, group):
     if user is None or group is None:
         return False
@@ -48,14 +35,40 @@ def is_user_in_group(user, group):
         return True
 
     for sub_group in group.groups:
-        return is_user_in_group(user, sub_group)
+        if is_user_in_group(user, sub_group):
+            return True
 
     return False
 
+
+parent = Group("parent")
+child = Group("child")
+sub_child = Group("subchild")
+sub_child_1 = Group("subchild_1")
+
+sub_child_user = "sub_child_user"
+sub_child.add_user(sub_child_user)
+
+for i in range(0, 100):
+    sub_child_1.add_user("User: {}".format(i))
+
+child.add_group(sub_child)
+child.add_group(sub_child_1)
+parent.add_group(child)
 
 print(is_user_in_group("sub_child_user", parent))
 # expected True
 print(is_user_in_group("sub_child_user", sub_child_1))
 # expected False
 print(is_user_in_group("sub_child_user", None))
+# expected False
+print(is_user_in_group("User: 78", parent))
+# expected True
+print(is_user_in_group("User: 78", sub_child))
+# expected False
+print(is_user_in_group("User: 101", parent))
+# expected False
+print(is_user_in_group("", parent))
+# expected False
+print(is_user_in_group(None, parent))
 # expected False
