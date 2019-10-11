@@ -191,6 +191,7 @@ def huffman_decoding(data, tree):
 
 
 if __name__ == "__main__":
+
     def simple_test():
         a_great_sentence = "The bird is the word"
 

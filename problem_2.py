@@ -44,9 +44,10 @@ def find_files(suffix, path):
     return c_files
 
 
-print(find_files('.c', './testdir'))
-# expected ['./testdir/t1.c', './testdir/subdir5/a.c', './testdir/subdir1/a.c', './testdir/subdir3/subsubdir1/b.c']
-print(find_files('.py', './testdir'))
-# expected []
-print(find_files('.py', './testdir_not_found'))
-# expected []
+if __name__ == '__main__':
+    print(find_files('.c', './testdir'))
+    # expected ['./testdir/t1.c', './testdir/subdir5/a.c', './testdir/subdir1/a.c', './testdir/subdir3/subsubdir1/b.c']
+    print(find_files('.py', './testdir'))
+    # expected []
+    print(find_files('.py', './testdir_not_found'))
+    # expected []

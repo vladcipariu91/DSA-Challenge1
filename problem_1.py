@@ -119,99 +119,99 @@ class DoublyLinkedList(object):
 
 
 # Testing
+if __name__ == '__main__':
+    def test_cache_hit_first():
+        lru_cache = LRUCache(5)
 
-def test_cache_hit_first():
-    lru_cache = LRUCache(5)
+        lru_cache.set(1, 1)
+        lru_cache.set(2, 2)
+        lru_cache.set(3, 3)
 
-    lru_cache.set(1, 1)
-    lru_cache.set(2, 2)
-    lru_cache.set(3, 3)
-
-    print(lru_cache.get(3))
-    # expected 3
-    print(lru_cache.to_list())
-    # expected [3, 2, 1]
-
-
-def test_cache_hit_middle():
-    lru_cache = LRUCache(5)
-
-    lru_cache.set(1, 1)
-    lru_cache.set(2, 2)
-    lru_cache.set(3, 3)
-
-    print(lru_cache.get(2))
-    # expected 2
-    print(lru_cache.to_list())
-    # expected [2, 3, 1]
+        print(lru_cache.get(3))
+        # expected 3
+        print(lru_cache.to_list())
+        # expected [3, 2, 1]
 
 
-def test_cache_hit_last():
-    lru_cache = LRUCache(5)
+    def test_cache_hit_middle():
+        lru_cache = LRUCache(5)
 
-    lru_cache.set(1, 1)
-    lru_cache.set(2, 2)
-    lru_cache.set(3, 3)
+        lru_cache.set(1, 1)
+        lru_cache.set(2, 2)
+        lru_cache.set(3, 3)
 
-    print(lru_cache.get(1))
-    # expected 1
-    print(lru_cache.to_list())
-    # expected [1, 3, 2]
-    print(lru_cache.map_size())
-    # expected 3
+        print(lru_cache.get(2))
+        # expected 2
+        print(lru_cache.to_list())
+        # expected [2, 3, 1]
 
 
-def test_cache_miss():
-    lru_cache = LRUCache(5)
+    def test_cache_hit_last():
+        lru_cache = LRUCache(5)
 
-    lru_cache.set(1, 1)
-    lru_cache.set(2, 2)
-    lru_cache.set(3, 3)
+        lru_cache.set(1, 1)
+        lru_cache.set(2, 2)
+        lru_cache.set(3, 3)
 
-    print(lru_cache.get(4))
-    # expected -1
-    print(lru_cache.to_list())
-    # expected [3, 2, 1]
-    print(lru_cache.map_size())
-    # expected 3
-
-
-def test_set_when_cache_is_full():
-    lru_cache = LRUCache(5)
-
-    lru_cache.set(1, 1)
-    lru_cache.set(2, 2)
-    lru_cache.set(3, 3)
-    lru_cache.set(4, 4)
-    lru_cache.set(5, 5)
-
-    print(lru_cache.to_list())
-    # expected [5, 4, 3, 2, 1]
-    print(lru_cache.map_size())
-    # expected 5
-
-    lru_cache.set(6, 6)
-
-    print(lru_cache.to_list())
-    # expected [6, 5, 4, 3, 2]
-    print(lru_cache.map_size())
-    # expected 5
+        print(lru_cache.get(1))
+        # expected 1
+        print(lru_cache.to_list())
+        # expected [1, 3, 2]
+        print(lru_cache.map_size())
+        # expected 3
 
 
-def test_empty():
-    lru_cache = LRUCache(5)
+    def test_cache_miss():
+        lru_cache = LRUCache(5)
 
-    print(lru_cache.get(4))
-    # expected -1
-    print(lru_cache.map_size())
-    # expected 0
-    print(lru_cache.to_list())
-    # expected []
+        lru_cache.set(1, 1)
+        lru_cache.set(2, 2)
+        lru_cache.set(3, 3)
+
+        print(lru_cache.get(4))
+        # expected -1
+        print(lru_cache.to_list())
+        # expected [3, 2, 1]
+        print(lru_cache.map_size())
+        # expected 3
 
 
-test_cache_hit_first()
-test_cache_hit_middle()
-test_cache_hit_last()
-test_cache_miss()
-test_set_when_cache_is_full()
-test_empty()
+    def test_set_when_cache_is_full():
+        lru_cache = LRUCache(5)
+
+        lru_cache.set(1, 1)
+        lru_cache.set(2, 2)
+        lru_cache.set(3, 3)
+        lru_cache.set(4, 4)
+        lru_cache.set(5, 5)
+
+        print(lru_cache.to_list())
+        # expected [5, 4, 3, 2, 1]
+        print(lru_cache.map_size())
+        # expected 5
+
+        lru_cache.set(6, 6)
+
+        print(lru_cache.to_list())
+        # expected [6, 5, 4, 3, 2]
+        print(lru_cache.map_size())
+        # expected 5
+
+
+    def test_empty():
+        lru_cache = LRUCache(5)
+
+        print(lru_cache.get(4))
+        # expected -1
+        print(lru_cache.map_size())
+        # expected 0
+        print(lru_cache.to_list())
+        # expected []
+
+
+    test_cache_hit_first()
+    test_cache_hit_middle()
+    test_cache_hit_last()
+    test_cache_miss()
+    test_set_when_cache_is_full()
+    test_empty()

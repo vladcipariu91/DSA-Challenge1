@@ -56,50 +56,50 @@ class Blockchain:
 
         return result
 
+if __name__ == '__main__':
+    blockchain = Blockchain()
+    genesis_timestamp = blockchain.head.timestamp
+    a_block = None
+    for i in range(0, 100):
+        blockchain.add_block("Test {}".format(i))
+        if i == 33:
+            a_block = blockchain.head
 
-blockchain = Blockchain()
-genesis_timestamp = blockchain.head.timestamp
-a_block = None
-for i in range(0, 100):
-    blockchain.add_block("Test {}".format(i))
-    if i == 33:
-        a_block = blockchain.head
+    before = datetime.now()
+    block = blockchain.find("Genesis Block", genesis_timestamp)
+    after = datetime.now()
+    print("It took {} to find the genesis block".format(after - before))
+    print(block)
+    """
+    expected:
+    Block: [
+    timestamp: 2019-10-09 16:56:03.187107+00:00, // this will vary
+    data: Genesis Block,
+    hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,
+    prev_hash: None
+    ]
+    """
 
-before = datetime.now()
-block = blockchain.find("Genesis Block", genesis_timestamp)
-after = datetime.now()
-print("It took {} to find the genesis block".format(after - before))
-print(block)
-"""
-expected:
-Block: [
-timestamp: 2019-10-09 16:56:03.187107+00:00, // this will vary
-data: Genesis Block,
-hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,
-prev_hash: None
-]
-"""
+    block = blockchain.find("Genesis Block", timestamp_now())
+    print(block)
+    # expected: None
 
-block = blockchain.find("Genesis Block", timestamp_now())
-print(block)
-# expected: None
+    block = blockchain.find("Test 33", a_block.timestamp)
+    print(block)
+    """
+    expected:
+    Block: [
+    timestamp: 2019-10-10 10:33:46.934075+00:00, // this will vary 
+    data: Test 33,
+    hash: c3dc8a00c2ec18e70becb81976332df1071cd091a254dee14388c5f0f4a1cf7c,
+    prev_hash: a40bd66484158ecf8ee95e16697519cc333cf80ac6e3500650567c5daa8a67a4
+    ]
+    """
 
-block = blockchain.find("Test 33", a_block.timestamp)
-print(block)
-"""
-expected:
-Block: [
-timestamp: 2019-10-10 10:33:46.934075+00:00, // this will vary 
-data: Test 33,
-hash: c3dc8a00c2ec18e70becb81976332df1071cd091a254dee14388c5f0f4a1cf7c,
-prev_hash: a40bd66484158ecf8ee95e16697519cc333cf80ac6e3500650567c5daa8a67a4
-]
-"""
+    block = blockchain.find(None, timestamp_now())
+    print(block)
+    # expected: None
 
-block = blockchain.find(None, timestamp_now())
-print(block)
-# expected: None
-
-block = blockchain.find(None, None)
-print(block)
-# expected: None
+    block = blockchain.find(None, None)
+    print(block)
+    # expected: None

@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="701fc137-36bb-4589-bc19-f68b5d24ff9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explanation_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/explanation_1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explanation_5.md" beforeDir="false" afterPath="$PROJECT_DIR$/explanation_5.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/problem_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem_4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570703974296</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixes explanation_1 and explanation_5.">
+      <created>1570705476113</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570705476113</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,6 +92,7 @@
     <MESSAGE value="updates problem_1's tests." />
     <MESSAGE value="fixes problem_4 and adds more unit tests." />
     <MESSAGE value="fixes problem_5 and adds more unit tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes problem_5 and adds more unit tests." />
+    <MESSAGE value="fixes explanation_1 and explanation_5." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes explanation_1 and explanation_5." />
   </component>
 </project>
